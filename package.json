@@ -19,5 +19,8 @@
 	"bugs": {
 		"url": "https://github.com/ShaunLWM/node-csgo-gsi/issues"
 	},
-	"homepage": "https://github.com/ShaunLWM/node-csgo-gsi#readme"
+	"homepage": "https://github.com/ShaunLWM/node-csgo-gsi#readme",
+	"dependencies": {
+		"easymidi": "^2.1.0"
+	}
 }

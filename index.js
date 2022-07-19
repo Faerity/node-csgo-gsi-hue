@@ -54,8 +54,8 @@ class CSGOGSI extends EventEmitter {
             this.emit("gameMap", data["map"]["name"]);
             this.emit("gamePhase", data["map"]["phase"]); //warmup etc
             this.emit("gameRounds", data["map"]["round"]);
-            this.emit("gameCTscore", data["map"]["team_ct"]);
-            this.emit("gameTscore", data["map"]["team_t"]);
+            this.emit("gameCTscore", data["map"]["team_ct"]["score"]);
+            this.emit("gameTscore", data["map"]["team_t"]["score"]);
         }
 
         if (data["round_wins"]) {
@@ -65,6 +65,10 @@ class CSGOGSI extends EventEmitter {
         if (data["player"]) {
             this.emit("player", data["player"]);
         }
+
+        /*if (data["phase_countdowns"]) {
+            this.emit("phaseCountdowns", data["phase_countdowns"]);
+        }*/
 
         if (data["round"]) {
             this.emit("roundPhase", data["round"]["phase"]);
